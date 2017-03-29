@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Koan_Gocheckout>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Koan_Gocheckout>
+    </modules>
+</config>

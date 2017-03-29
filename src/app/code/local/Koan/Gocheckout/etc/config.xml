@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Koan_Gocheckout>
+            <version>0.1.0</version>
+        </Koan_Gocheckout>
+    </modules>
+    <global>
+        <models>
+            <koan_gocheckout>
+                <class>Koan_Gocheckout_Model</class>
+            </koan_gocheckout>
+        </models>
+        <events>
+            <checkout_cart_add_product_complete>
+				<!-- identifier of the event we want to catch -->
+				<observers>
+					<koan_cartbypass_observer>
+						<!-- identifier of the event handler -->
+						<type>singleton</type>
+						<!-- class method call type; valid are model, object and singleton -->
+						<class>Koan_Gocheckout_Model_Observer</class>
+						<!-- observers class alias -->
+						<method>afterAddToCart</method>
+						<!-- observer's method to be called -->
+						<args></args>
+						<!-- additional arguments passed to observer -->
+					</koan_cartbypass_observer>
+				</observers>
+            </checkout_cart_add_product_complete>
+        </events>
+    </global>
+</config>
